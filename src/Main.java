@@ -1,10 +1,12 @@
 import java.util.*;
 import java.io.*;
+import com.murcia.utils.*;
+
 class Main {
     public static void main(String[] args) throws Exception{
         File file=new File("randomtext.txt");
         Scanner sc=new Scanner(file);
-        LinkedList<StringBuilder> l=new LinkedList<StringBuilder>();
+        ListaEnlazada<StringBuilder> l= new  ColaEnlazada <StringBuilder>();
         while(sc.hasNextLine()) {
             String line=sc.nextLine();
             String[] words=line.split("\\s");
