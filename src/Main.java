@@ -105,10 +105,10 @@ class Editor {
     }
     public void print() throws Exception{
         writer= new FileWriter("randomtext.txt");
-        for(StringBuilder i:l) {
-            writer.write(i.toString());
-            System.out.print(i);
-            if(!i.toString().equals("\n")) {
+        for(int i=0;i<l.size();i++){
+            writer.write(l.get(i).toString());
+            System.out.print(l.get(i));
+            if(!l.get(i).toString().equals("\n")) {
                 writer.write(" ");
                 System.out.print(" ");
             }
