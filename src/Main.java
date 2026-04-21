@@ -6,7 +6,7 @@ class Main {
     public static void main(String[] args) throws Exception{
         File file=new File("randomtext.txt");
         Scanner sc=new Scanner(file);
-        ListaEnlazada<StringBuilder> l= new  ColaEnlazada <StringBuilder>();
+        ColaEnlazada<StringBuilder> l= new  ColaEnlazada <StringBuilder>();
         while(sc.hasNextLine()) {
             String line=sc.nextLine();
             String[] words=line.split("\\s");
@@ -44,10 +44,10 @@ class Main {
     }
 }
 class Editor {
-    LinkedList<StringBuilder> l;
+    ColaEnlazada<StringBuilder> l;
     int node,position;
     FileWriter writer;
-    public Editor(LinkedList<StringBuilder> l) {
+    public Editor(ColaEnlazada<StringBuilder> l) {
         this.l=l;
         node=position=0;
     }
